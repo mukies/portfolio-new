@@ -1,62 +1,42 @@
-import React from "react";
-import AboutImg from "../../assets/7358653-removebg-preview.png";
-import { IoArrowForward } from "react-icons/io5";
+import AboutImg from "../../assets/me.jpeg";
+import TextChange from "../TextChange";
 const About = () => {
   return (
     <div
       id="About"
-      className="text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12"
+      className=" text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-xl mx-0 lg:mx-20 bg-opacity-30 rounded-lg sm:p-8 flex flex-col gap-5"
     >
-      <div>
-        <h2 className="text-2xl md:text-4xl font-bold">About</h2>
-        <div className="md:flex flex-wrap flex-col md:flex-row items-center">
-          <img className="md:h-80" src={AboutImg} alt="About img" />
-
-          <ul>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Frontend developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores explicabo deserunt asperiores quasi, vitae blanditiis
-                  perferendis quos consectetur ea harum! Libero aut qui
-                  similique recusandae provident consectetur sed itaque alias
-                  sint ipsa?
-                </p>
-              </span>
+      <h2 className="text-4xl font-bold text-center underline">About Me</h2>
+      <div className=" w-[90%] mx-auto sm:p-8 flex flex-col gap-4 rounded-lg  bg-[#171d32]">
+        <div className="md:flex flex-wrap flex-col xl:flex-row md:gap-2 items-center justify-between">
+          <div className=" flex-[0.6]">
+            <div className=" md:h-80 md:w-80 h-60 w-60 mx-auto rounded-full border-[16px] border-[#314077] overflow-hidden">
+              <img
+                className="h-full w-full object-cover object-top"
+                src={AboutImg}
+                alt="About img"
+              />
             </div>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
+          </div>
 
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Database developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores
-                </p>
-              </span>
+          <div className=" flex flex-col flex-1 gap-2 py-2 px-1 sm:gap-4">
+            <div className="flex flex-col gap-8">
+              <div className=" text-xl lg:text-2xl flex flex-col sm:flex-row sm:gap-2 font-semibold">
+                <span>I&apos;m Mukesh and I&apos;m a</span> <TextChange />
+              </div>
+              <p className=" text-lg sm:text-xl">
+                <strong>Hi there!</strong> I am a skilled Full Stack Developer
+                specializing in the MERN stack. I have experience building
+                dynamic web applications, including social media platforms with
+                real-time messaging and JWT-based authentication, and tour
+                booking systems with eSewa and Khalti integration. My work
+                involves modern frameworks like React, Node.js, Express.js, and
+                MongoDB, along with state management tools like Zustand. I’m
+                passionate about solving complex problems and delivering
+                seamless web experiences.
+              </p>
             </div>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Backend developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores explicabo deserunt asperiores quasi, vitae blanditiis
-                  perferendis
-                </p>
-              </span>
-            </div>
-          </ul>
+          </div>
         </div>
       </div>
     </div>

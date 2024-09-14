@@ -1,33 +1,26 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 const TextChange = () => {
-  const texts = ["Hi, I'm Aditi", "Hi, I'm Aditi", "Hi, I'm Aditi"];
-  const [currenText, setCurrentText] = useState("");
-  const [endValue, setendValue] = useState(true);
-  const [isForward, setIsForward] = useState(true);
-  const [index, setIndex] = useState(0);
+  const texts = [
+    "Frontend Developer",
+    "Backend Developer",
+    "Full stack Developer",
+    "MERN stack Developer",
+  ];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentText(texts[index].substring(0, endValue));
-      if (isForward) {
-        setendValue((prev) => prev + 1);
-      } else {
-        setendValue((prev) => prev - 1);
-      }
-      if (endValue > texts[index].length + 10) {
-        setIsForward(false);
-      }
-      if (endValue < 2.1) {
-        setIsForward(true);
-        setIndex((prev) => prev & texts.length);
-      }
-    }, 50);
-
-    return () => clearInterval(intervalId);
-  }, [endValue, isForward, index, texts]);
-
-  return <div className="transition ease duration-300">{currenText}</div>;
+  return (
+    <h4 className=" font-semibold text-orange-400">
+      <Typewriter
+        words={texts}
+        loop
+        cursor
+        cursorStyle="_"
+        typeSpeed={70}
+        deleteSpeed={50}
+        delaySpeed={1000}
+      />
+    </h4>
+  );
 };
 
 export default TextChange;

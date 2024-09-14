@@ -1,7 +1,6 @@
-import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
-import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -17,17 +16,28 @@ const Footer = () => {
       </div>
 
       <ul className="text-sm md:text-xl">
+        <li className="flex gap-1 items-center capitalize">
+          <IoLocationSharp size={20} />
+          bharatpur, chitwan
+        </li>
         <li className="flex gap-1 items-center">
           <MdOutlineEmail size={20} />
-          myemail@gmail.com
+          <a
+            className=" group hover:text-[#171d32] duration-200 "
+            href="mailto:muk.yess@gmail.com"
+          >
+            muk.yess@gmail.com
+          </a>
         </li>
-        <li className="flex gap-1 items-center">
-          <CiLinkedin />
-          linkdlin.com/username
-        </li>
-        <li className="flex gap-1 items-center">
+        <li className="flex gap-1 items-center cursor-pointer">
           <FaGithub />
-          github.com/username
+          <a
+            className=" group hover:text-[#171d32] duration-200 "
+            href="https://github.com/mukies"
+            target="_blank"
+          >
+            github.com/mukies
+          </a>
         </li>
       </ul>
     </div>
